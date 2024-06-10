@@ -1,0 +1,535 @@
+:root {
+  /* --first: #7d6dff; */
+  /* --first: #a743e1; */
+  --first: #bc48f9;
+  /* --second: #28b8ff; */
+  /* --second: #07c7e9; */
+  --second: #05d7fb;
+  --third: #111111;
+  --fourth: #010101;
+  --grey: #444444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--fourth);
+  color: white;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(25, 25, 25, 0.5);
+  width: 60vw;
+  position: fixed;
+  bottom: 3rem;
+  border-radius: 5rem;
+  z-index: 9999;
+  backdrop-filter: blur(0.5rem);
+  border-bottom: 1px solid var(--first);
+}
+
+ul.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+}
+
+img.logo {
+  display: none;
+  width: 7rem;
+  height: 3.5rem;
+}
+
+ul a {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+}
+
+ul a p {
+  transition: 0.2s ease;
+}
+
+ul a:hover p {
+  text-shadow: 0 0 1rem var(--first);
+}
+
+ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  width: 0.1rem;
+  height: 0.1rem;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--second) 0%, var(--first) 100%);
+  transition: 0.2s ease;
+}
+
+ul a:hover::after {
+  transform: scaleX(50);
+}
+
+ul a > li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* Hero */
+section.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 6rem;
+  padding-inline: 3rem;
+  padding-bottom: 12rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(270deg, var(--first) 0%, var(--second) 100%);
+  mask-image: radial-gradient(
+    circle at 50% -20%,
+    rgba(0, 0, 0, 0.5),
+    transparent 70%
+  );
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.hero-top .logo {
+  background-image: url(images/logo-IBIKKG-putih.png);
+  width: 7rem;
+  height: 3.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 0.1rem var(--fourth));
+}
+
+.hero-top .register a {
+  display: inline-block;
+  background-color: var(--first);
+  padding: 0.75rem 1.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.hero-top .register a:hover {
+  box-shadow: 0 0 0.5rem var(--first);
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+.hero-title h1 {
+  font-size: 2.5rem;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+
+.hero-title h3 {
+  font-size: 2rem;
+  font-family: "Orbitron", sans-serif;
+  background-image: linear-gradient(to right, var(--first), var(--second));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.cooperation {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cooperation .company {
+  width: 5rem;
+  height: 5rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+
+.company.sosro {
+  background-image: url(images/kerja_sama/sosro.png);
+  background-size: 60%;
+}
+.company.metro {
+  background-image: url(images/kerja_sama/metro.png);
+}
+.company.indomaret {
+  background-image: url(images/kerja_sama/indomaret.png);
+}
+.company.uob {
+  background-image: url(images/kerja_sama/uob.png);
+}
+.company.tokopedia {
+  background-image: url(images/kerja_sama/tokopedia.png);
+}
+.company.permata {
+  background-image: url(images/kerja_sama/permata.png);
+  background-size: 60%;
+}
+.company.dirjenjak {
+  background-image: url(images/kerja_sama/dirjenjak.png);
+  background-size: 60%;
+}
+.company.astra {
+  background-image: url(images/kerja_sama/astra.png);
+  background-size: 108%;
+}
+.company.cbn {
+  background-image: url(images/kerja_sama/cbn.png);
+}
+.company.microsoft {
+  background-image: url(images/kerja_sama/microsoft.png);
+}
+.company.ey {
+  background-image: url(images/kerja_sama/ey.png);
+}
+.company.konimex {
+  background-image: url(images/kerja_sama/konimex.png);
+}
+.company.bca {
+  background-image: url(images/kerja_sama/bca.png);
+}
+.company.pwc {
+  background-image: url(images/kerja_sama/pwc.png);
+  background-size: 130%;
+}
+.company.metrodata {
+  background-image: url(images/kerja_sama/metrodata.png);
+  background-size: 60%;
+}
+.company.rhb {
+  background-image: url(images/kerja_sama/rhb.png);
+}
+
+/* Visi dan Misi */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title .horizontal-line {
+  width: 45vw;
+  height: 0.1rem;
+  background-color: var(--grey);
+}
+
+.title h1 {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  min-width: 10rem;
+  background-image: linear-gradient(to right, var(--first), var(--second));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+section.visimisi {
+  position: relative;
+}
+
+.visimisi video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -3;
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.5),
+    transparent 50%
+  );
+}
+
+.visimisi .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5rem;
+  column-gap: 12rem;
+  row-gap: 6rem;
+}
+
+.visimisi .visi,
+.visimisi .misi {
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  position: relative;
+  background-color: var(--third);
+  /* background-color: #ffffff; */
+}
+
+.visimisi .visi::before,
+.visimisi .misi::before {
+  content: "";
+  width: 101%;
+  height: 101%;
+  position: absolute;
+  top: 50%;
+  background-image: linear-gradient(to right, var(--first), var(--second));
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  border-radius: 1rem;
+  z-index: -1;
+  box-shadow: inset 0 -0.8rem 1rem 0 rgba(1, 1, 1, 0.95);
+}
+
+.content h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  background-image: linear-gradient(to right, var(--first), var(--second));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.separator {
+  width: 100%;
+  height: 0.1rem;
+  margin-block: 3rem;
+  background: linear-gradient(
+    90deg,
+    var(--fourth) 0%,
+    var(--first) 30%,
+    var(--first) 60%,
+    var(--fourth) 100%
+  );
+}
+
+.main-title h1 {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Program */
+section.program {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8rem;
+  border-left: 0.1rem solid white;
+  margin-inline: 5rem;
+  margin-top: 5rem;
+  position: relative;
+}
+
+section.program::after {
+  content: "";
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  top: -10rem;
+  left: -25rem;
+  background: linear-gradient(270deg, var(--first) 0%, var(--second) 100%);
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.3),
+    transparent 60%
+  );
+}
+
+.program .kelas {
+  padding-left: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  align-items: center;
+  background: transparent;
+  position: relative;
+}
+
+.program .kelas::before {
+  content: "";
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--third);
+  border: 0.1rem solid white;
+  border-radius: 1rem;
+  left: -2.1rem;
+  top: -2rem;
+  display: grid;
+  place-items: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+}
+
+.program .kelas.reguler::before {
+  content: "1";
+}
+.program .kelas.eksekutif::before {
+  content: "2";
+}
+.program .kelas.pascasarjana::before {
+  content: "3";
+}
+
+.program .kelas.eksekutif {
+  flex-wrap: wrap-reverse;
+}
+
+.program .kelas p {
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  min-width: 20rem;
+}
+
+span.spesial-text {
+  background-image: linear-gradient(to right, var(--first), var(--second));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.kelas .logo {
+  min-width: 20rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: var(--fourth);
+  cursor: pointer;
+  box-shadow: 0.5rem 0.5rem 1rem 0 var(--second),
+    -0.5rem -0.5rem 1rem 0 var(--first);
+  transition: 0.3s ease-in-out;
+}
+
+.kelas .logo:hover {
+  box-shadow: 1rem 1rem 1rem 0 var(--first), -1rem -1rem 1rem 0 var(--second);
+}
+
+.kelas.reguler .logo.reguler {
+  background-image: url(images/program/reguler.png);
+}
+.kelas.eksekutif .logo.eksekutif {
+  background-image: url(images/program/eksekutif.png);
+}
+.kelas.pascasarjana .logo.pascasarjana {
+  background-image: url(images/program/pascasarjana.png);
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+
+  /* Hero */
+  .hero-title {
+    row-gap: 5rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 870px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* Navbar */
+@media (max-width: 730px) {
+  nav {
+    width: 40vw;
+  }
+
+  ul.navbar-nav {
+    position: absolute;
+    flex-direction: column;
+    bottom: 130%;
+    display: none;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(1, 1, 1, 0.9);
+    backdrop-filter: blur(0.5rem);
+  }
+
+  ul.navbar-nav.active {
+    display: flex;
+  }
+
+  img.logo {
+    display: block;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .program .kelas {
+    padding-left: 4rem;
+  }
+}
+
+/* Animation */
